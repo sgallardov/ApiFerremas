@@ -4,10 +4,32 @@ __pycache__/
 *$py.class
 *.so
 .Python
+<<<<<<< HEAD
+=======
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+>>>>>>> 9637009450f2b4c22a0191658b6e7b9376b9c853
 .env
 .venv
 venv/
 ENV/
+<<<<<<< HEAD
 env.bak/
 venv.bak/
 
@@ -23,3 +45,14 @@ venv.bak/
 .env.development.local
 .env.test.local
 .env.production.local 
+=======
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log 
+>>>>>>> 9637009450f2b4c22a0191658b6e7b9376b9c853
