@@ -1,0 +1,16 @@
+{
+    "usuarios": [
+        {
+            "user": "javier_thompson",
+            "password": "aONF4d6aNBIxRjlgjBRRzrS",
+            "role": "admin",
+            "nombre": "Javier Thompson"
+        },
+        {
+            "user": "ignacio_tapia",
+            "password": "f7rWChmQS1JYfThT",
+            "role": "client",
+            "nombre": "Ignacio Tapia"
+        }
+    ]
+} 
