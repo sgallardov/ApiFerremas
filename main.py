@@ -7,17 +7,24 @@ from dotenv import load_dotenv
 # Cargar variables de entorno
 load_dotenv()
 
-app = FastAPI()
+app = FastAPI(
+    title="API Ferremas",
+    description="API para el sistema de Ferremas",
+    version="1.0.0"
+)
 
-# Obtener el entorno actual
-ENVIRONMENT = os.getenv("ENVIRONMENT", "development")
-FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
+# Obtener el entorno actual y puerto
+ENVIRONMENT = os.getenv("ENVIRONMENT", "production")
+FRONTEND_URL = os.getenv("FRONTEND_URL", "*")
 
-# Configuración de CORS basada en el entorno
-origins = ["http://localhost:3000"]  # URL de desarrollo por defecto
-
-if ENVIRONMENT == "production":
-    origins.append(FRONTEND_URL)  # URL de producción
+# Configuración de CORS
+origins = [
+    "*",  # Permite todas las origins en desarrollo
+    "http://localhost",
+    "http://localhost:3000",
+    "https://ferremas.cl",
+    "https://www.ferremas.cl"
+]
 
 app.add_middleware(
     CORSMiddleware,
@@ -41,5 +48,8 @@ async def root():
     return {
         "message": "Bienvenido a la API de Ferremas",
         "environment": ENVIRONMENT,
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "status": "running"
     }
+
+# No es necesario el bloque if __name__ == "__main__" ya que Railway usará el Procfile

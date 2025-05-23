@@ -4,9 +4,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-<<<<<<< HEAD
-=======
-env/
 build/
 develop-eggs/
 dist/
@@ -24,28 +21,11 @@ wheels/
 *.egg
 
 # Virtual Environment
->>>>>>> 9637009450f2b4c22a0191658b6e7b9376b9c853
 .env
 .venv
+env/
 venv/
 ENV/
-<<<<<<< HEAD
-env.bak/
-venv.bak/
-
-# VS Code
-.vscode/
-*.code-workspace
-
-# Logs
-*.log
-
-# Local environment
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local 
-=======
 
 # IDE
 .idea/
@@ -54,5 +34,11 @@ venv.bak/
 *.swo
 
 # Logs
-*.log 
->>>>>>> 9637009450f2b4c22a0191658b6e7b9376b9c853
+*.log
+
+# Local development
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
